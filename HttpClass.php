@@ -76,7 +76,21 @@
 			return $arr;
 		}
 
+		// sadece GET request'i içindir.
+		public function query(){
+			$method = $this->serverParameter("REQUEST_METHOD");
+			if(isset($method)){
+				if($method == 'GET'){
+					function filter($method){
+					 return is_array($method) ? array_map('filter', $method) : htmlspecialchars(trim($method));
+					}
+					$_GET = array_map('filter',$_GET);
 
+					return $_GET;
+				}
+			}
+	
+		}
 
 		
 		private function fileWrite($fileName,$parameter,$content){

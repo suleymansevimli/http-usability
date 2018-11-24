@@ -9,9 +9,14 @@
 	// sayfa yenilenmelerini takip etmek için kullanılabilecek olan fonksiyon;
 	# $unique = $server->is_changed_unique_id();
 
-	$referer = $server->referer();
-	// çıktımızı alalım.
-
+	// referer bilgisini burdan alıyoruz veya değiştiriyoruz..
+	# $referer = $server->referer();
+	
+	// accept değişkeni içerisindekileri almak için bu alanı kullanabiliriz
 	$accept = $server->accept(["text/plain"]);
-	print_r($accept);
+
+	$query = $server->query();
+		
+	// çıktımızı alalım.
+	print_r($query);
 			
