@@ -12,6 +12,6 @@
 	$referer = $server->referer();
 	// çıktımızı alalım.
 
-	$accept = $server->accept("text/plain");
+	$accept = $server->accept(["text/plain"]);
 	print_r($accept);
 			

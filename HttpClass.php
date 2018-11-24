@@ -63,11 +63,20 @@
 				$values = func_get_args();
 				$count = count($values); 
 
+				// değerleri ekrana bastırmak için 
+				# return $change;
+
+				// değer sayılarını öğrenmek için 
+				# return $count;
+
 				$arr = $change;
+
 			}
 
-			print_r($arr);
+			return $arr;
 		}
+
+
 
 		
 		private function fileWrite($fileName,$parameter,$content){
