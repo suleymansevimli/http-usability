@@ -7,16 +7,16 @@
 	$return = $server->serverParameter("SERVER_NAME");
 
 	// sayfa yenilenmelerini takip etmek için kullanılabilecek olan fonksiyon;
-	 # $unique = $server->is_changed_unique_id();
+	 $unique = $server->is_changed_unique_id();
 
 	// referer bilgisini burdan alıyoruz veya değiştiriyoruz..
-	 # $referer = $server->referer();
+	 $referer = $server->referer();
 	
 	// accept değişkeni içerisindekileri almak için bu alanı kullanabiliriz
-	# $accept = $server->accept(["text/plain"]);
+	$accept = $server->accept(["text/plain"]);
 
 	// gelen QUERY_STRİNG değeriniin içeriğini etkisizleştirme
-	# $query = $server->query();
+	$query = $server->query();
 		
 	// çıktımızı alalım.
-	#print_r($referer);
+	 print_r($return);

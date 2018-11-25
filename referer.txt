@@ -1,5 +1,0 @@
-
-
-
-http://localhost/http-info/referer.php
-http://localhost/http-info/referer.php
