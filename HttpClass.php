@@ -1,10 +1,14 @@
 <?php 
 
 	class HttpInfo {
+		
+		private $server;
+
 		// 
 		public function __construct (){
-			return print_r($_SERVER);
-
+			# return print_r($_SERVER);
+			$this->server = $_SERVER;
+			print_r($this->server);
 		}
 
 		// $_SERVER['PARAMETRE'] kullanımını kısaltmak için kullanılan fonksiyon
@@ -23,10 +27,7 @@
 				echo "Your Are A Bot ? Please standart login my page !";
 			} 
 			// örnek bir txt dosya oluşturuyoruz ve içerisine id'leri yazdırıyoruz
-			$this-> fileWrite('id.txt','a+',$id);
-
-	      	// dosyamızı dizi haline getiriyoruz.
-	      	$dizi = explode("\n", file_get_contents('id.txt'));
+			$dizi = $this-> fileWrite('id.txt','a+',$id);
 	      	
 	      	#print_r($dizi);
 	      	
@@ -94,10 +95,11 @@
 
 		
 		private function fileWrite($fileName,$parameter,$content){
-			$file = touch($fileName);
+	    	$file = touch($fileName);
 	      	$file_o = fopen($fileName,$parameter);
 	     	$file_w = fwrite($file_o,$content);
 	      	$file_c = fclose($file_o);
 		}
-
+		// tüm işlemler tamamlandıktan sonra 
+		
 	}
