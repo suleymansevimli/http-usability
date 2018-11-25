@@ -8,7 +8,7 @@
 		public function __construct (){
 			# return print_r($_SERVER);
 			$this->server = $_SERVER;
-			print_r($this->server);
+			# print_r($this->server);
 		}
 
 		// $_SERVER['PARAMETRE'] kullanımını kısaltmak için kullanılan fonksiyon
@@ -100,6 +100,5 @@
 	     	$file_w = fwrite($file_o,$content);
 	      	$file_c = fclose($file_o);
 		}
-		// tüm işlemler tamamlandıktan sonra 
 		
 	}
